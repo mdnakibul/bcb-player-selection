@@ -1,5 +1,7 @@
 import React from 'react';
-import './Player.css'
+import './Player.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 const Player = (props) => {
     const { id, name, salary, type, image } = props.player;
     return (
@@ -9,7 +11,8 @@ const Player = (props) => {
                 <h5 className="card-title">{id} ) {name}</h5>
                 <p className="card-text">Player's Salary : {salary}</p>
                 <p className="card-text">Player Type : {type}</p>
-                <button className="btn btn-primary" onClick={() => props.handleAddPlayer(props.player)}>Add Player</button>
+                <button className="btn btn-primary" onClick={() => props.handleAddPlayer(props.player)}>Add Player <FontAwesomeIcon icon={faPlusCircle} />
+ </button>
             </div>
         </div>
     );
